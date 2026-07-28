@@ -1,0 +1,121 @@
+/* --- FORCE THE BODY TO ALLOW SCROLLING --- */
+body {
+    min-height: 100vh;
+    background: #000000; /* Matching your black background */
+    display: flex;
+    flex-direction: column; /* Stacks layout elements sequentially */
+    overflow-y: auto;       /* Explicitly enables vertical scrolling */
+}
+
+/* --- THE FIRST VIEWBLOCK --- */
+.main-page-layout {
+    width: 100%;
+    min-height: 100vh;      /* Takes up the full initial screen size */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+/* --- THE DESCRIPTION SECTION BELOW --- */
+.description-section {
+    width: 100%;
+    min-height: 60vh;       /* Gives it substantial height below the main view */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    background: #000000;
+}
+
+.description-content {
+    max-width: 700px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.description-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: rgb(231, 215, 138); 
+}
+
+.description-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+h1{
+    font-size: 120px;
+    font-weight: 900;
+    background-image: url('IMG_6260.jpg');
+    background-size: 200%;
+    background-position: left;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    animation: moveBG 5s linear infinite alternate;
+}
+
+/* --- FOOTER STYLES --- */
+.site-footer {
+    width: 100%;
+    padding: 30px 20px;       /* Adds padding top and bottom */
+    text-align: center;       /* Centers the copyright text */
+    background: transparent;  /* Keeps your existing background color showing through */
+    margin-top: auto;         /* Pushes the footer down if content is short */
+}
+
+.site-footer p {
+    font-size: 14px;          /* Clean, standard footer text size */
+    color: rgba(255, 255, 255, 0.6); /* Softened white text to match your theme */
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+}
+
+@keyframes moveBG {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+ul a:hover{
+    color: red;
+}
+
+ul a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+nav{
+    position: absolute;
+    top: 25px; 
+    z-index: 1000;
+    
+    /* ADD THESE 3 LINES TO PERFECTLY CENTER IT */
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content; /* Keeps your items tightly together in a neat row */
+}
+

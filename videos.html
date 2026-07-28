@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="videos.css">
+</head>
+<body> 
+    <h1>Videos</h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pictures.html">Pictures</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="1st.html">Monthsaries</a></li>
+            <li><a href="2nd.html">Annivarsaries</a></li>
+        </ul>
+    </nav>
+
+    <div class="carousel-wrapper">
+        <div class="carousel">
+            <div class="slide s1"><video src="Mentality.mp4" autoplay loop muted playsinline></video></div>
+            <div class="slide s2"><video src="Home.mp4" autoplay loop muted playsinline></video></div>
+            <div class="slide s3"><video src="Mine.mp4" autoplay loop muted playsinline></video></div>
+            <div class="slide s4"></div>
+            <div class="slide s5"></div>
+        </div>
+    <div class="scroll-buttons">
+        <button class="scroll-btn scroll-left" aria-label="Scroll left">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="scroll-btn scroll-right" aria-label="Scroll right">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+</div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 | Our Love Captures | All rights reserved.</p>
+    </footer>
+
+    <script>
+    const carousel = document.querySelector('.carousel');
+    document.querySelector('.scroll-left').addEventListener('click', () => {
+        carousel.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+    document.querySelector('.scroll-right').addEventListener('click', () => {
+        carousel.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+</script>
+</body>

@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: rgb(109, 10, 10);
+    padding-top: 60px; /* Reduced so things aren't pushed too far down */
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* --- THE NEW WRAPPER GRID --- */
+.gallery-wrapper {
+    display: grid;
+    /* This creates 3 equal columns: 1st ring stays Left, 2nd ring stays Center */
+    grid-template-columns: 1fr 1fr 1fr; 
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    min-height: 400px;
+    /* This tells the browser how 'deep' the 3D effect should look, preventing flat collapse */
+    perspective: 1000px; 
+}
+
+/* --- THE CONTAINERS (Identical Setup) --- */
+.container, .container2 {
+    position: relative;
+    width: 200px;
+    height: 260px;
+    transform-style: preserve-3d;
+    animation: spinRing 12s linear infinite; /* Slightly slowed down to look smoother */
+}
+
+/* Places the first ring in the left column */
+.container {
+    grid-column: 1;
+}
+
+/* Places the second ring in the middle column (Center) */
+.container2 {
+    grid-column: 3;
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,255,255,.3);
+    /* Keeps images from glitching when turning away from the screen view */
+    backface-visibility: visible; 
+}
+
+/* --- CONTAINER 1 IMAGES (Perfect 5-Sided Ring Geometry) --- */
+.rc1 { background: url('kim1.jpg') center/cover; transform: rotateY(0deg) translateZ(150px); }
+.rc2 { background: url('kim2.jpg') center/cover; transform: rotateY(72deg) translateZ(150px); }
+.rc3 { background: url('kim3.jpg') center/cover; transform: rotateY(144deg) translateZ(150px); }
+.rc4 { background: url('kim4.jpg') center/cover;   transform: rotateY(216deg) translateZ(150px); }
+.rc5 { background: url('kim5.jpg') center/cover;   transform: rotateY(288deg) translateZ(150px); }
+
+/* --- CONTAINER 2 IMAGES (Perfect 5-Sided Ring Geometry) --- */
+.rc6 { background: url('kev1.jpg') center/cover; transform: rotateY(0deg) translateZ(150px); }
+.rc7 { background: url('kev2.jpg') center/cover; transform: rotateY(72deg) translateZ(150px); }
+.rc8 { background: url('kev3.jpg') center/cover; transform: rotateY(144deg) translateZ(150px); }
+.rc9 { background: url('kev4.jpg') center/cover; transform: rotateY(216deg) translateZ(150px); }
+.rc10 { background: url('kev5.jpg') center/cover; transform: rotateY(288deg) translateZ(150px); }
+
+/* --- THE SPINNING HEART RULES --- */
+.center-heart {
+    grid-column: 2; /* Forces it into the center column between the two rings */
+    font-size: 70px; /* Adjust this number to make the heart bigger or smaller */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    
+    /* Applies a beautiful, soft glow effect that fits your page theme */
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
+    
+    /* Attaches the spinning animation */
+    animation: spinHeart 4s linear infinite; 
+}
+
+/* --- THE HEART ANIMATION --- */
+@keyframes spinHeart {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes spinRing {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+
+.button {
+    display: inline-block;
+    background: rgb(231, 215, 138);
+    position: fixed; 
+    top: 15px; 
+    left: 15px;
+    z-index: 1000;
+    padding: 10px 25px;
+    color: white;
+    overflow: hidden;
+}
+.button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,.4);
+    transform: skewX(-20deg);
+}
+.button:hover::after { animation: shine .8s; }
+@keyframes shine { 100% { left: 150%; } }
+
+footer {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+}

@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* FIXED NAVBAR BACKROUND CAPSULE */
+nav {
+    position: fixed; 
+    top: 15px; 
+    left: 15px;
+    z-index: 1000;
+    padding: 10px 25px;
+    background-color: #1a1a1a; /* Sleek dark background design */
+    border-radius: 50px; /* Fully rounded capsule edges */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); /* Depth shadow */
+}
+
+/* REMOVED ABSOLUTE POSITION TO FIT IN CAPSULE */
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+ul a:hover {
+    color: red;
+}
+
+/* --- SUB NAVIGATION CAPSULE --- */
+nav.sub-nav {
+    position: fixed; 
+    top: 85px; /* Placed exactly below your main navbar */
+    left: 15px;
+    z-index: 1000;
+    padding: 8px 20px;
+    background-color: #1a1a1a; /* Matches the dark background look */
+    border-radius: 50px; 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Scopes style specifically to your new menu layout structure */
+nav.sub-nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px; /* Slightly tighter gap than the main menu */
+}
+
+nav.sub-nav ul a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px; /* Slightly smaller text to visually differentiate it */
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav.sub-nav ul a i {
+    color: #e7d78a; /* Makes the icons gold by default */
+    transition: transform 0.3s ease;
+}
+
+nav.sub-nav ul a:hover {
+    color: #e7d78a; /* Soft gold accent on hover, or keep 'red' if you prefer! */
+}
+
+nav.sub-nav ul a:hover i {
+    transform: scale(1.1); /* Makes the icon pop slightly when you hover over the option */
+}
+
+.pictures{
+    display: flex;
+    width: 600px;
+    height: 400px;
+    gap: 10px;
+}
+
+.photo {
+    flex: 1;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    cursor: pointer;
+    filter: grayscale(80%);
+    transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.p1{
+    background-image: url('IMG_6260.jpg');
+    background-position: center center;
+}
+
+.p2{
+    background-image: url('IMG_7839.jpg');
+    background-position: center center;
+}
+
+.p3{
+    background-image: url('IMG_6269.jpg');
+    background-position: center center;
+}
+
+.p4{
+    background-image: url('IMG_5634.jpg');
+    background-position: center center;
+}
+    
+.p5{
+    background-image: url('IMG_6146.jpg');
+    background-position: center center;
+}
+
+.p6{
+    background-image: url('tm6.jpg');
+    background-position: center center;
+}
+
+.photo:hover{
+    flex: 5;
+    filter: grayscale(0%);
+}
+
+footer {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+}
