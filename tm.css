@@ -32,7 +32,7 @@ h1 {
 
 /* --- THE CONTAINERS (Identical Setup) --- */
 
-.container, .container2, .container3, .container4, .container6 {
+.container, .container2, .container3, .container4, .container5, .container6 {
     position: relative;
     width: 200px;
     height: 260px;
@@ -62,6 +62,11 @@ h1 {
 
 .container6 {
     grid-column: 4 / 6;        /* Slots 4 and 5 */
+}
+
+/* Third Row: Centered below both bottom containers */
+.container5 {
+    grid-column: 3 / 5;        /* Slots 3 and 5, centered below */
 }
 .card {
     position: absolute;
@@ -107,6 +112,13 @@ h1 {
 .rc23 { background: url('') center/cover; transform: rotateY(144deg) translateZ(150px); }
 .rc24 { background: url('') center/cover; transform: rotateY(216deg) translateZ(150px); }
 .rc25 { background: url('') center/cover; transform: rotateY(288deg) translateZ(150px); }
+
+/* --- CONTAINER 5 IMAGES (Third row, centered) --- */
+.rc26 { background: url('') center/cover; transform: rotateY(0deg) translateZ(150px); }
+.rc27 { background: url('') center/cover; transform: rotateY(72deg) translateZ(150px); }
+.rc28 { background: url('') center/cover; transform: rotateY(144deg) translateZ(150px); }
+.rc29 { background: url('') center/cover; transform: rotateY(216deg) translateZ(150px); }
+.rc30 { background: url('') center/cover; transform: rotateY(288deg) translateZ(150px); }
 
 @keyframes spinRing {
     from { transform: rotateY(0deg); }
