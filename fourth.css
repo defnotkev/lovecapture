@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: rgb(109, 10, 10);
+    padding-top: 60px; /* Reduced so things aren't pushed too far down */
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* --- THE WRAPPER (6-Column Grid Layout) --- */
+.gallery-wrapper {
+    display: grid;
+    /* Create 6 equal columns so we can handle half-column centering */
+    grid-template-columns: repeat(6, 1fr); 
+    row-gap: 60px;             /* Vertical space between the rows */
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    min-height: 400px;
+    perspective: 1000px; 
+}
+
+/* --- THE CONTAINERS (Identical Setup) --- */
+
+.container, .container2, .container3, .container4, .container5, .container6 {
+    position: relative;
+    width: 200px;
+    height: 260px;
+    transform-style: preserve-3d;
+    animation: spinRing 12s linear infinite; /* Slightly slowed down to look smoother */
+}
+
+/* --- THE CONTAINERS (Precise Grid Positioning) --- */
+
+/* Top Row: Each takes up 2 grid slots */
+.container {
+    grid-column: 1 / 3;        /* Slots 1 and 2 */
+}
+
+.container2 {
+    grid-column: 3 / 5;        /* Slots 3 and 4 (Center) */
+}
+
+.container3 {
+    grid-column: 5 / 7;        /* Slots 5 and 6 */
+}
+
+/* Bottom Row: Shifted over by 1 slot to perfectly center underneath */
+.container4 {
+    grid-column: 2 / 4;        /* Slots 2 and 3 */
+}
+
+.container6 {
+    grid-column: 4 / 6;        /* Slots 4 and 5 */
+}
+
+/* Third Row: Centered below both bottom containers */
+.container5 {
+    grid-column: 3 / 5;        /* Slots 3 and 5, centered below */
+}
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,255,255,.3);
+    /* Keeps images from glitching when turning away from the screen view */
+    backface-visibility: visible; 
+}
+
+/* --- CONTAINER 1 IMAGES (Perfect 5-Sided Ring Geometry) --- */
+.rc1 { background: url('fm1.jpg') center/cover; transform: rotateY(0deg) translateZ(150px); }
+.rc2 { background: url('fm2.jpg') center/cover; transform: rotateY(72deg) translateZ(150px); }
+.rc3 { background: url('fm3.jpg') center/cover; transform: rotateY(144deg) translateZ(150px); }
+.rc4 { background: url('fm4.jpg') center/cover;   transform: rotateY(216deg) translateZ(150px); }
+.rc5 { background: url('fm5.jpg') center/cover;   transform: rotateY(288deg) translateZ(150px); }
+
+/* --- CONTAINER 2 IMAGES (Perfect 5-Sided Ring Geometry) --- */
+.rc6 { background: url('') center/cover; transform: rotateY(0deg) translateZ(150px); }
+.rc7 { background: url('') center/cover; transform: rotateY(72deg) translateZ(150px); }
+.rc8 { background: url('') center/cover; transform: rotateY(144deg) translateZ(150px); }
+.rc9 { background: url('') center/cover; transform: rotateY(216deg) translateZ(150px); }
+.rc10 { background: url('') center/cover; transform: rotateY(288deg) translateZ(150px); }
+
+/* --- CONTAINER 3 IMAGES (Perfect 5-Sided Ring Geometry) --- */
+.rc11 { background: url('') center/cover; transform: rotateY(0deg) translateZ(150px); }
+.rc12 { background: url('') center/cover; transform: rotateY(72deg) translateZ(150px); }
+.rc13 { background: url('') center/cover; transform: rotateY(144deg) translateZ(150px); }
+.rc14 { background: url('') center/cover; transform: rotateY(216deg) translateZ(150px); }
+.rc15 { background: url('') center/cover; transform: rotateY(288deg) translateZ(150px); }
+
+/* --- CONTAINER 4 IMAGES (Perfect 5-Sided Ring Geometry) --- */
+.rc16 { background: url('') center/cover; transform: rotateY(0deg) translateZ(150px); }
+.rc17 { background: url('') center/cover; transform: rotateY(72deg) translateZ(150px); }
+.rc18 { background: url('') center/cover; transform: rotateY(144deg) translateZ(150px); }
+.rc19 { background: url('') center/cover; transform: rotateY(216deg) translateZ(150px); }
+.rc20 { background: url('') center/cover; transform: rotateY(288deg) translateZ(150px); }
+
+/* --- CONTAINER 6 IMAGES (Perfect 5-Sided Ring Geometry) --- */
+.rc21 { background: url('') center/cover; transform: rotateY(0deg) translateZ(150px); }
+.rc22 { background: url('') center/cover; transform: rotateY(72deg) translateZ(150px); }
+.rc23 { background: url('') center/cover; transform: rotateY(144deg) translateZ(150px); }
+.rc24 { background: url('') center/cover; transform: rotateY(216deg) translateZ(150px); }
+.rc25 { background: url('') center/cover; transform: rotateY(288deg) translateZ(150px); }
+
+/* --- CONTAINER 5 IMAGES (Third row, centered) --- */
+.rc26 { background: url('') center/cover; transform: rotateY(0deg) translateZ(150px); }
+.rc27 { background: url('') center/cover; transform: rotateY(72deg) translateZ(150px); }
+.rc28 { background: url('') center/cover; transform: rotateY(144deg) translateZ(150px); }
+.rc29 { background: url('') center/cover; transform: rotateY(216deg) translateZ(150px); }
+.rc30 { background: url('') center/cover; transform: rotateY(288deg) translateZ(150px); }
+
+@keyframes spinRing {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+/* Keep your existing button styles at the bottom */
+.button {
+    display: inline-block;
+    background: rgb(231, 215, 138);
+    position: fixed; 
+    top: 15px; 
+    left: 15px;
+    z-index: 1000;
+    padding: 10px 25px;
+    color: white;
+    overflow: hidden;
+}
+.button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,.4);
+    transform: skewX(-20deg);
+}
+.button:hover::after { animation: shine .8s; }
+@keyframes shine { 100% { left: 150%; } }
+
+footer {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+}
