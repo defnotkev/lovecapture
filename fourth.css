@@ -117,7 +117,7 @@ h1 {
 .rc26 { background: url('') center/cover; transform: rotateY(0deg) translateZ(150px); }
 .rc27 { background: url('') center/cover; transform: rotateY(72deg) translateZ(150px); }
 .rc28 { background: url('') center/cover; transform: rotateY(144deg) translateZ(150px); }
-.rc29 { background: url('') center/cover; transform: rotateY(216deg) translateZ(150px); }
+.rc29 { background: url('g') center/cover; transform: rotateY(216deg) translateZ(150px); }
 .rc30 { background: url('') center/cover; transform: rotateY(288deg) translateZ(150px); }
 
 @keyframes spinRing {
