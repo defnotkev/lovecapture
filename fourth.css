@@ -109,12 +109,6 @@ h1 {
 .rc24 { background: url('fm24.jpg') center/cover; transform: rotateY(216deg) translateZ(150px); }
 .rc25 { background: url('fm25.jpg') center/cover; transform: rotateY(288deg) translateZ(150px); }
 
-/* --- CONTAINER 5 IMAGES (Third row, centered) --- */
-.rc26 { background: url('fm26.jpg') center/cover; transform: rotateY(0deg) translateZ(150px); }
-.rc27 { background: url('fm27.jpg') center/cover; transform: rotateY(72deg) translateZ(150px); }
-.rc28 { background: url('fm28.jpg') center/cover; transform: rotateY(144deg) translateZ(150px); }
-.rc29 { background: url('fm29.jpg') center/cover; transform: rotateY(216deg) translateZ(150px); }
-.rc30 { background: url('fm30.jpg') center/cover; transform: rotateY(288deg) translateZ(150px); }
 
 @keyframes spinRing {
     from { transform: rotateY(0deg); }
