@@ -100,25 +100,25 @@ h1 {
 .rc15 { background: url('fm15.jpg') center/cover; transform: rotateY(288deg) translateZ(150px); }
 
 /* --- CONTAINER 4 IMAGES (Perfect 5-Sided Ring Geometry) --- */
-.rc16 { background: url('') center/cover; transform: rotateY(0deg) translateZ(150px); }
-.rc17 { background: url('') center/cover; transform: rotateY(72deg) translateZ(150px); }
-.rc18 { background: url('') center/cover; transform: rotateY(144deg) translateZ(150px); }
-.rc19 { background: url('') center/cover; transform: rotateY(216deg) translateZ(150px); }
-.rc20 { background: url('') center/cover; transform: rotateY(288deg) translateZ(150px); }
+.rc16 { background: url('fm16.jpg') center/cover; transform: rotateY(0deg) translateZ(150px); }
+.rc17 { background: url('fm17.jpg') center/cover; transform: rotateY(72deg) translateZ(150px); }
+.rc18 { background: url('fm18.jpg') center/cover; transform: rotateY(144deg) translateZ(150px); }
+.rc19 { background: url('fm19.jpg') center/cover; transform: rotateY(216deg) translateZ(150px); }
+.rc20 { background: url('fm20.jpg') center/cover; transform: rotateY(288deg) translateZ(150px); }
 
 /* --- CONTAINER 6 IMAGES (Perfect 5-Sided Ring Geometry) --- */
-.rc21 { background: url('') center/cover; transform: rotateY(0deg) translateZ(150px); }
-.rc22 { background: url('') center/cover; transform: rotateY(72deg) translateZ(150px); }
-.rc23 { background: url('') center/cover; transform: rotateY(144deg) translateZ(150px); }
-.rc24 { background: url('') center/cover; transform: rotateY(216deg) translateZ(150px); }
-.rc25 { background: url('') center/cover; transform: rotateY(288deg) translateZ(150px); }
+.rc21 { background: url('fm21.jpg') center/cover; transform: rotateY(0deg) translateZ(150px); }
+.rc22 { background: url('fm22.jpg') center/cover; transform: rotateY(72deg) translateZ(150px); }
+.rc23 { background: url('fm23.jpg') center/cover; transform: rotateY(144deg) translateZ(150px); }
+.rc24 { background: url('fm24.jpg') center/cover; transform: rotateY(216deg) translateZ(150px); }
+.rc25 { background: url('fm25.jpg') center/cover; transform: rotateY(288deg) translateZ(150px); }
 
 /* --- CONTAINER 5 IMAGES (Third row, centered) --- */
-.rc26 { background: url('') center/cover; transform: rotateY(0deg) translateZ(150px); }
-.rc27 { background: url('') center/cover; transform: rotateY(72deg) translateZ(150px); }
-.rc28 { background: url('') center/cover; transform: rotateY(144deg) translateZ(150px); }
-.rc29 { background: url('g') center/cover; transform: rotateY(216deg) translateZ(150px); }
-.rc30 { background: url('') center/cover; transform: rotateY(288deg) translateZ(150px); }
+.rc26 { background: url('fm26.jpg') center/cover; transform: rotateY(0deg) translateZ(150px); }
+.rc27 { background: url('fm27.jpg') center/cover; transform: rotateY(72deg) translateZ(150px); }
+.rc28 { background: url('fm28.jpg') center/cover; transform: rotateY(144deg) translateZ(150px); }
+.rc29 { background: url('fm29.jpg') center/cover; transform: rotateY(216deg) translateZ(150px); }
+.rc30 { background: url('fm30.jpg') center/cover; transform: rotateY(288deg) translateZ(150px); }
 
 @keyframes spinRing {
     from { transform: rotateY(0deg); }
