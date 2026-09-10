@@ -64,10 +64,6 @@ h1 {
     grid-column: 4 / 6;        /* Slots 4 and 5 */
 }
 
-/* Third Row: Centered below both bottom containers */
-.container5 {
-    grid-column: 3 / 5;        /* Slots 3 and 5, centered below */
-}
 .card {
     position: absolute;
     width: 100%;
