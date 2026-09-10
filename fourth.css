@@ -32,7 +32,7 @@ h1 {
 
 /* --- THE CONTAINERS (Identical Setup) --- */
 
-.container, .container2, .container3, .container4, .container5 {
+.container, .container2, .container3, .container4, .container6 {
     position: relative;
     width: 200px;
     height: 260px;
